@@ -1,0 +1,5 @@
+jajko,4,szt
+zielony szparag,4,szt
+sól,1/4,g
+pieprz,1/4,g
+masło,25,g
