@@ -50,11 +50,21 @@ def print_table(table, title_list):
     print("\\", "-" * (total_width), "/")
 
 
+def get_inputs(list_labels, title):
+    inputs = []
+    print(title)
+    for i in range(len(list_labels)):
+        user_input = input('Wprowadź %s: ' % (list_labels[i]))
+        inputs.append(user_input)
+    return inputs
+
 def print_menu(title, list_options, exit_message):
     print(title)
     for number, option in enumerate(list_options, 1):
         print("    ({}) {}".format(number, option))
     print("    (0)", exit_message)
+    #choose_option = get_inputs(['Wybierz którąś z opcji:'], '')
+
 
 '''
 def print_results(result, label):
@@ -78,6 +88,6 @@ def get_inputs(list_labels, title):
 def print_error_message(message):
         print('Error: {}'.format(message))
 '''
+
 if __name__ == "__main__":
     print_table(data_manager.get_table_from_file('recipe_ingredients/jajecznica.txt'), title_list)
-
