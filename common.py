@@ -1,4 +1,3 @@
-
 def enumerate_lists_in_table(table):
     numbers = list(range(1, len(table) + 1))
 

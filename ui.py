@@ -49,6 +49,13 @@ def print_table(table, title_list):
 
     print("\\", "-" * (total_width), "/")
 
+
+def print_menu(title, list_options, exit_message):
+    print(title)
+    for number, option in enumerate(list_options, 1):
+        print("    ({}) {}".format(number, option))
+    print("    (0)", exit_message)
+
 '''
 def print_results(result, label):
         print(label)
@@ -71,4 +78,6 @@ def get_inputs(list_labels, title):
 def print_error_message(message):
         print('Error: {}'.format(message))
 '''
-print_table(data_manager.get_table_from_file('recipe_ingredients/jajecznica.txt'), title_list)
+if __name__ == "__main__":
+    print_table(data_manager.get_table_from_file('recipe_ingredients/jajecznica.txt'), title_list)
+
