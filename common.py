@@ -17,4 +17,3 @@ def common_clear(): #clears terminal
     # for mac and linux(here, os.name is 'posix')
     else: 
         _ = system('clear')
-

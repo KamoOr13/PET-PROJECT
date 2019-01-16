@@ -63,7 +63,6 @@ def print_menu(title, list_options, exit_message):
     for number, option in enumerate(list_options, 1):
         print("    ({}) {}".format(number, option))
     print("    (0)", exit_message)
-    #choose_option = get_inputs(['Wybierz którąś z opcji:'], '')
 
 
 '''
