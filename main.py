@@ -26,7 +26,6 @@ def choose_menu_option():
 
 def main():
     MENU_OPTIONS = ('Przepisy', 'Lista zakupów', 'Jadłospis', 'Random')
-
     ui.print_menu('Menu główne:', MENU_OPTIONS, 'Wyjdź')
     choose_menu_option()
 
