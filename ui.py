@@ -1,6 +1,7 @@
 #User interface module
 import data_manager
 import common
+import os
 
 title_list = ['numer','nazwa składnika','ilość','miara']
 
@@ -64,6 +65,18 @@ def print_menu(title, list_options, exit_message):
         print("    ({}) {}".format(number, option))
     print("    (0)", exit_message)
     #choose_option = get_inputs(['Wybierz którąś z opcji:'], '')
+
+def print_list_of_recepies():
+    r_list = os.listdir("PET-PROJECT/recipe_ingredients")
+    r_list.remove("README.txt")
+    stripped_list = []
+    for i in r_list:
+        i = i.strip(".txt")
+        stripped_list.append(i)
+    for j, i in enumerate(stripped_list, start=1):
+        print(f"{j}   {i}")
+    
+
 
 
 '''

@@ -2,9 +2,11 @@ import common
 import ui
 from os import sys
 
+recipes_labels = ["No.", "Przepis"]
 RECIPES_MENU = ('Szczegóły przepisu', 'Dodaj przepis', 'Usuń przepis')
 def start_module():
     common.common_clear()
+    ui.print_list_of_recepies()
     ui.print_menu('Menu przepisów:', RECIPES_MENU, 'Wróc do menu głownego')
     choose_option = ui.get_inputs(['Wybierz którąś z opcji:'], '')
     if choose_option[0] == "1":
