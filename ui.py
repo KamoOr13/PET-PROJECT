@@ -65,41 +65,13 @@ def print_menu(title, list_options, exit_message):
         print("    ({}) {}".format(number, option))
     print("    (0)", exit_message)
 
-def print_list_of_recepies():
-    r_list = os.listdir("PET-PROJECT/recipe_ingredients")
-    r_list.remove("README.txt")
-    stripped_list = []
-    for i in r_list:
-        i = i.strip(".txt")
-        stripped_list.append(i)
-    for j, i in enumerate(stripped_list, start=1):
-        print(f"{j}   {i}")
-    
-
-
-
-'''
-def print_results(result, label):
-        print(label)
-        print(result)
-        print('/n')
-    
-def print_menu(title, list_options, exit_message):
-        print(title)
-    for k, l in enumerate(list_options):
-        print("({}) {}".format(k + 1, l))
-    print("(0)", exit_message)
-
-def get_inputs(list_labels, title):
-    inputs = []
-    print(title)
-    for i in range(len(list_labels)):
-        inputs.append(input('Enter ' + list_labels[i] + ': ')) 
-    return inputs
-
-def print_error_message(message):
-        print('Error: {}'.format(message))
-'''
+def print_list(names_list, labels):
+    print(f'{labels[0]}  {labels[1]}')
+    for ordinal_number, name  in enumerate(names_list, start=1):
+        blank_space = 5
+        print('-' * (len(str(ordinal_number)) + len(name) + blank_space))
+        print(f'| {ordinal_number} | {name}')
+        print('-' * (len(str(ordinal_number)) + len(name) + blank_space))
 
 if __name__ == "__main__":
     print_table(data_manager.get_table_from_file('recipe_ingredients/jajecznica.txt'), title_list)
